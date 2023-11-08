@@ -50,6 +50,10 @@ function onEnterInput(e)
         <span onclick="deleteCard(this)"><i class="fa-solid fa-trash-can"></i></span> 
         `;
 
+        issueCard.draggable = true;
+
+        issueCard.addEventListener("dragstart", onDragStart);
+
         issueInput.value = "";
         todoContainer.appendChild(issueCard);
         issueInput.blur();
